@@ -33,7 +33,6 @@ class Configuration (object):
                         "/achieve - чтобы добавить ачивку \n" \
                        "/alarm - срочное сообщенье всем \n" \
                        "/add_event - чтобы добавить событие \n" \
-                       "/add_event - чтобы добавить событие \n" \
                        "/language - изменить язык для всех юзеров (не баг, а фича)"
      self.add_phone_and_address = "Пожалуйста добавьте свой адрес и телефон \n" \
                                   "/add_phone - чтобы добавить или изменить телефон \n" \
@@ -77,6 +76,7 @@ class Configuration (object):
      self.team_pass = "Введите пароль команды"
      self.ok = "Правильно"
      self.not_ok = "Неправильно"
+     self.nothing_today = "Ничего сегодня не идет :("
      self.quest = "Квест завершен, поздравляю!)"
      self.big_letter = "Пожалуйста, начинайте ваши ответы с заглавной буквы"
      self.admin_bool=False
@@ -102,7 +102,7 @@ class Configuration (object):
                                   "/achieve - to add achieve \n" \
                                   "/add_event - to add event in schedule \n" \
                                   "/alarm - to send message everybody \n" \
-                                  "/language - to change language for all users (not bag, feature) \n"
+                                  "/language - to change language for all users (not bag, feature)"
                 self.admin_text = "/user - to go back to user mode \n" \
                                   "/achieve - to add achieve \n" \
                                   "/alarm - to send message everybody \n" \
@@ -146,6 +146,7 @@ class Configuration (object):
                 self.data_exist = "There is no such data"
                 self.alarm = "Enter message"
                 self.nothing = "Nothing is happening now :("
+                self.nothing_today = "Nothing is planned for today  :("
                 self.team_login = "Enter team login"
                 self.ok = "Right"
                 self.not_ok = "Wrong"
@@ -214,6 +215,7 @@ class Configuration (object):
                 self.data_exist = "Данных нет в системе"
                 self.alarm = "Введите срочное сообщение"
                 self.nothing = "Ничего сейчас не идет :("
+                self.nothing_today = "Ничего сегодня не идет :("
                 self.ok = "Правильно"
                 self.team_login = "Введите логин команды"
                 self.team_pass = "Введите пароль команды"
