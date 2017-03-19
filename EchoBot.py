@@ -232,8 +232,10 @@ def name_enter(message):        #Ввод ачивки, выбираем пол�
                 bot.send_message(message.chat.id, conf.user_not_exist)
     except TypeError:
         bot.send_message(message.chat.id, conf.type_error)
+        del achieve_storage[message.chat.id]
     except sqlite3.ProgrammingError:
         bot.send_message(message.chat.id, conf.type_error)
+        del achieve_storage[message.chat.id]
 
 def achieve_enter (message):  #Ввод ачивки, название ачивки
     try:
@@ -272,7 +274,7 @@ def achiev_notification (message): #написать всем об ачивке
         cur1 = conf.conn_db_cursor.execute("SELECT * FROM People Where Id=?", (id1,))
         row = cur1.fetchone()
         str2 = (row [1] + " " + row [2] + " получил(а) ачивку ' " + achieve_storage [message.chat.id]["name"] + " ' - "+ achieve_storage[message.chat.id]["descr"] + "!")
-        achieve_storage [message.chat.id].clear()
+        del achieve_storage [message.chat.id]
         for i in range(len(all_id)):
             id = (all_id[i]) [0]
             bot.send_message(id, str2)
