@@ -95,6 +95,7 @@ class Configuration (object):
                                  "/address - find somebody's address \n" \
                                  "/achieve_list - list of smbd achievements \n" \
                                  "/schedule - day's schedule \n" \
+                                  "/now - what and where is happening right now \n" \
                                   "/help - help \n"
 
                 self.admin_main_text = "You are in admin mod now \n" \
@@ -166,7 +167,8 @@ class Configuration (object):
                                  "/address - найти адрес человека \n" \
                                  "/achieve_list - список ачивок человека \n" \
                                  "/schedule - расписание на день \n" \
-                                  "/help - помощь \n"
+                                  "/now - что и где сейчас происходит \n" \
+                                  "/help - помощь"
                 self.admin_main_text = "Вы теперь админ \n" \
                                   "/user - чтобы стать обычным пользователем \n" \
                                   "/achieve - чтобы добавить ачивку \n" \

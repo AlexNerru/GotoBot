@@ -430,18 +430,16 @@ def now(message):
         conf.conn_db_cursor.execute("SELECT * FROM Events WHERE Date=?", (current_date,))
         events = conf.conn_db_cursor.fetchall()
         was_sent=False
-        if events: #проверка запланированно ли что на день
-            for i in range(len(events)):
+        for i in range(len(events)):
                 row=events[i]
                 if (row[1]<=current_time and row[2]>=current_time):
                     str=conf.now1 + row [4] + "' " + conf.address + ": " + row [3]
                     bot.send_message(message.chat.id, str)
-                else:
-                    if (was_sent==False):
-                        bot.send_message(message.chat.id, conf.nothing)
-                        was_sent=True
-        else:
-            bot.send_message(message.chat.id, conf.nothing_today)
+                    was_sent=True
+        if (was_sent==False):
+               bot.send_message(message.chat.id, conf.nothing)
+               was_sent=True
+        conf.bd_of()
     except sqlite3.ProgrammingError:
         bot.send_message(message.chat.id, conf.type_error)
 
