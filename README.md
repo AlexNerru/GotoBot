@@ -9,9 +9,8 @@ GotoBot является ботом помощником для обучающи
 1. [Как добавить бота](https://github.com/AlexNerru/GotoBot#Как-добавить-бота).
 2. [Старт](https://github.com/AlexNerru/GotoBot#Как-взаимодействовать-с-ботом).
 3. [Администрирование](https://github.com/AlexNerru/GotoBot#admin).
-4. [Ошибки, установка, дополнение](https://github.com/AlexNerru/GotoBot#Про-ошибки-и-баги).
-
-
+4. [Стандартные фукции](https://github.com/AlexNerru/GotoBot#Стандартные-команды).
+5. [Ошибки, установка, дополнение](https://github.com/AlexNerru/GotoBot#Про-ошибки-и-баги).
 
 ## Как добавить бота?
 Как любого другого бота в Телеграм, в строке поиска вводим имя NerruBot (в последствии можно будет получить имя GoToBot, но оно сейчас занято) и отправить боту /start.
